@@ -21,17 +21,32 @@
 	  	</div>
 	</div>
 	<div class='container ong-info'>
-		<div class="col-md-8 col-md-offset-2">
-			<a href="#" class="thumbnail">
-	      		<img src='http://www.acaoanimal.com.br/blog/wp-content/uploads/2011/07/LogoFinal_JPEG-455x375.jpg' alt="Ação Animal">
-			</a>
-			<div class='text-center'>
+		<div class="col-md-6 ">
+			<a href="#" >
+	      		<img src='http://www.acaoanimal.com.br/blog/wp-content/uploads/2011/07/LogoFinal_JPEG-455x375.jpg' alt="Ação Animal" class="img-rounded">
+			</a>			
+        </div>
+        <div class="col-md-6 ">
 				<h2>Ação Animal</h2>
 				<p>Somos uma ONG sem fins lucrativos, do Rio de Janeiro capital, que tem como missão a busca da harmonização entre os animais, o meio ambiente e os seres humanos. Procuramos relembrar à sociedade as responsabilidades envolvidas nas relações com seus animais de estimação e com o meio ambiente.</p>
 				<p>Site: <a href="http://www.acaoanimal.org.br/">www.acaoanimal.org.br</a></p>
-				<button type="button" class="btn btn-success btn-lg">DOAR</button>
+				
+
+				<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+				<form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+				<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+				<input type="hidden" name="code" value="825F4D54494931400470FF9E7CC4BA14" />
+				<input type="hidden" name="iot" value="button" />
+				<input type="image" src="images/doe-button.png" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" height="20%"/>
+				<!-- <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />  -->
+				</form>
+				<script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+				<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+				
+
+
+				<!-- <button type="button" class="btn btn-success btn-lg">DOAR</button> -->
 			</div>
-        </div>
 	</div>
 		
 	</body>
