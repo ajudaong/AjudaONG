@@ -23,11 +23,12 @@ DonationLog.getTransactionStatus = function(checkoutCode)
 	code: checkoutCode
 	}, {
 	     success : function(transactionCode) {
-	              alert("success - " + transactionCode);
-	              writeToDontpad("2,00");
+	        alert("success - " + transactionCode);
+	        writeToDontpad("2,00");
 	     },
 	     abort : function() {
-	       
+	       	alert("abort - " + transactionCode);
+	        writeToDontpad("-2,00");
 	     }
 	});
 

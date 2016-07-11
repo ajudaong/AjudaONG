@@ -1,3 +1,13 @@
+window.onload = function()
+{
+	updateDonationLog();
+}
+
+function updateDonationLog()
+{
+	DonationLog.getFromDontpad();
+}
+
 function writeToDontpad(donationValue) {
 	console.log("Enviando para dontpad...");
 
