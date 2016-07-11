@@ -16,9 +16,9 @@ DonationLog.addLog = function(date, value)
 	donationLog.appendChild(valueDiv);
 };
 
-DonationLog.getTransactionStatus = function(checkoutCode)
+DonationLog.getTransactionStatus = function()
 {
-	// checkoutCode = '8F530471B0B0DE06646B2FB7CEB4310F';
+	checkoutCode = '8F530471B0B0DE06646B2FB7CEB4310F';
 	PagSeguroLightbox({
 	code: checkoutCode
 	}, {
