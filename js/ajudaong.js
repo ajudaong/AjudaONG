@@ -1,6 +1,13 @@
-function writeToDontpad() {
+function writeToDontpad(donationValue) {
 	console.log("Enviando para dontpad...");
-	$.post( "http://dontpad.com/ajudaong/log.body.json", { text: "github" } );
+
+	readFromDontpad( function(data) {
+		var oldContent = data; 
+		var toWrite =  oldContent + "\n" + donationValue;
+
+		$.post( "http://dontpad.com/ajudaong/log.body.json", { text: toWrite } );
+	});
+
 }
 
 function readFromDontpad(callback) {
@@ -13,7 +20,7 @@ function readFromDontpad(callback) {
 	});
 
 	$("#temp-storage").load('http://dontpad.com/!/266af60a32285a665372e6e8670db2cb20ea1277', function() {
-		dontpadContent = document.getElementById('temp-storage').innerHTML;
-		callback();
+		var dontpadContent = document.getElementById('temp-storage').innerHTML;
+		callback(dontpadContent);
 	});
 }
