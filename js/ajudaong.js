@@ -8,7 +8,7 @@ function writeToDontpad(donationValue) {
 
 	readFromDontpad( function(data) {
 		var oldContent = data; 
-		var toWrite =  oldContent + "\n" + dFormatted + "|" donationValue;
+		var toWrite =  oldContent + "\n" + dFormatted + "|" + donationValue;
 
 		$.post( "http://dontpad.com/ajudaong/log.body.json", { text: toWrite } );
 	});
@@ -27,6 +27,4 @@ function readFromDontpad(callback) {
 		var dontpadContent = document.getElementById('temp-storage').innerHTML;
 		callback(dontpadContent);
 	});
-
-
 }
