@@ -1,18 +1,18 @@
 function writeToDontpad() {
-	// console.log("Enviando para dontpad...");
-	// $.post( "http://dontpad.com/ajudaong/log.body.json", { text: "github" } );
-
-	console.log('Lendo do dontpad...');
-	$.get( "https://dontpad.com/ajudaong/log.body.json", function( data ) {
-  		console.log( data );
-	});
-
+	console.log("Enviando para dontpad...");
+	$.post( "http://dontpad.com/ajudaong/log.body.json", { text: "github" } );
 }
 
 function readFromDontpad() {
-	console.log('Lendo do dontpad...');
-	$.get( "http://dontpad.com/ajudaong/log.body.json", function( data ) {
-  		console.log( data );
-	});
+	$.ajaxPrefilter( function (options) {
+		  if (options.crossDomain && jQuery.support.cors) {
+		    var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		    options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		    //options.url = "http://cors.corsproxy.io/url=" + options.url;
+		  }
+		});
+
+		$("#loaded").load('http://dontpad.com/!/266af60a32285a665372e6e8670db2cb20ea1277');
+		
 }
 
