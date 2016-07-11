@@ -12,7 +12,5 @@ function readFromDontpad() {
 		  }
 		});
 
-		$("#loaded").load('http://dontpad.com/!/266af60a32285a665372e6e8670db2cb20ea1277');
-		
+		$("#loaded").load('http://dontpad.com/!/266af60a32285a665372e6e8670db2cb20ea1277');		
 }
-

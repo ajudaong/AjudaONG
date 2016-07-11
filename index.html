@@ -11,6 +11,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 		<script src="js/ajudaong.js"></script>
+		<script src="js/DonationLog.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -27,22 +28,42 @@
 			</a>			
         </div>
         <div class="col-md-6 ">
-				<h2>Ação Animal</h2>
-				<p>Somos uma ONG sem fins lucrativos, do Rio de Janeiro capital, que tem como missão a busca da harmonização entre os animais, o meio ambiente e os seres humanos. Procuramos relembrar à sociedade as responsabilidades envolvidas nas relações com seus animais de estimação e com o meio ambiente.</p>
-				<p>Site: <a href="http://www.acaoanimal.org.br/">www.acaoanimal.org.br</a></p>
-				
-				<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-				<form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
-				<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-				<input type="hidden" name="code" value="8F530471B0B0DE06646B2FB7CEB4310F" />
-				<input type="hidden" name="iot" value="button" />
-				<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" onclick="writeToDontpad()"/>
-				</form>
-				<script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
-				<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+			<h2>Ação Animal</h2>
+			<p>Somos uma ONG sem fins lucrativos, do Rio de Janeiro capital, que tem como missão a busca da harmonização entre os animais, o meio ambiente e os seres humanos. Procuramos relembrar à sociedade as responsabilidades envolvidas nas relações com seus animais de estimação e com o meio ambiente.</p>
+			<p>Site: <a href="http://www.acaoanimal.org.br/">www.acaoanimal.org.br</a></p>
+			
+			<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+			<form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+			<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+			<input type="hidden" name="code" value="8F530471B0B0DE06646B2FB7CEB4310F" />
+			<input type="hidden" name="iot" value="button" />
+			<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" onclick="writeToDontpad()"/>
+			</form>
+			<script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+			<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
 
-				<!-- <button type="button" class="btn btn-success btn-lg">DOAR</button> -->
+			<!-- <button type="button" class="btn btn-success btn-lg">DOAR</button> -->
+		</div>
+		<div class="col-md-6" id="donation-log">
+			<div class="col-md-4">
+				allan
 			</div>
+			<div class="col-md-4">
+				2.00
+			</div>
+			<div class="col-md-4">
+				dia
+			</div>
+			<div class="col-md-4">
+				allan
+			</div>
+			<div class="col-md-4">
+				2.00
+			</div>
+			<div class="col-md-4">
+				dia
+			</div>
+		</div>
 	</div>
 		
 	</body>
