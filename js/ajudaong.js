@@ -6,6 +6,8 @@ window.onload = function()
 function updateDonationLog()
 {
 	DonationLog.getFromDontpad();
+
+	setTimeout(updateDonationLog, 3000);
 }
 
 function writeToDontpad(donationValue) {

@@ -1,4 +1,10 @@
-.ong-info {
+.ong-info
+{
 	margin: auto;
 	float: none;
+}
+
+#donation-log
+{
+	overflow-y: auto;
 }

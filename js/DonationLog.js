@@ -38,6 +38,9 @@ DonationLog.getFromDontpad = function()
 {
 	readFromDontpad(function(data)
 	{
+		var donationLog = document.getElementById("donation-log");
+		donationLog.innerHTML = "";
+
 		var logList = data.split("\n");
 		for (logEntry of logList){
 			var log = logEntry.split("|");
