@@ -38,3 +38,21 @@ function readFromDontpad(callback) {
 		callback(dontpadContent);
 	});
 }
+
+function getTransactionStatus()
+{
+	checkoutCode = '8F530471B0B0DE06646B2FB7CEB4310F';
+	PagSeguroLightbox({code: checkoutCode},
+	{
+	     success : function(transactionCode) {
+	        alert("success - " + transactionCode);
+	        console.log("2");
+	        writeToDontpad("2,00");
+	     },
+	     abort : function() {
+	       	alert("abort");
+	       	console.log("1");
+	        writeToDontpad("-2,00");
+	     }
+	});
+}
