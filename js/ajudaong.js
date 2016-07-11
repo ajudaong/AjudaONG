@@ -23,4 +23,6 @@ function readFromDontpad(callback) {
 		var dontpadContent = document.getElementById('temp-storage').innerHTML;
 		callback(dontpadContent);
 	});
+
+
 }

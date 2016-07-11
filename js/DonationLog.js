@@ -21,3 +21,22 @@ DonatinonLog.addLog = function(name, value, date){
 	donationLog.appendChild(valueDiv);
 	donationLog.appendChild(dateDiv);
 }
+
+DonationLog.getTransactionStatus = function(checkoutCode)
+{
+	// checkoutCode = '8F530471B0B0DE06646B2FB7CEB4310F';
+	PagSeguroLightbox({
+	code: checkoutCode
+	}, {
+	     success : function(transactionCode) {
+	              alert("success - " + transactionCode);
+	              writeToDontpad("2,00");
+	     },
+	     abort : function() {
+	       
+	     }
+	});
+
+
+
+}
