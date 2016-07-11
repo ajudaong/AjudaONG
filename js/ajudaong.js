@@ -7,7 +7,7 @@ function updateDonationLog()
 {
 	DonationLog.getFromDontpad();
 
-	setTimeout(updateDonationLog, 3000);
+	setTimeout(updateDonationLog, 60000);
 }
 
 function writeToDontpad(donationValue) {
