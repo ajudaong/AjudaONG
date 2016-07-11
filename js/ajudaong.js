@@ -1,13 +1,17 @@
 function writeToDontpad(donationValue) {
 	console.log("Enviando para dontpad...");
 
+	var d = new Date;
+	var dFormatted = [d.getMonth()+1, d.getDate(), d.getFullYear()].join('/')+' '+
+              	  [d.getHours(),d.getMinutes(),d.getSeconds()].join(':');
+
+
 	readFromDontpad( function(data) {
 		var oldContent = data; 
-		var toWrite =  oldContent + "\n" + donationValue;
+		var toWrite =  oldContent + "\n" + dFormatted + "|" donationValue;
 
 		$.post( "http://dontpad.com/ajudaong/log.body.json", { text: toWrite } );
 	});
-
 }
 
 function readFromDontpad(callback) {
