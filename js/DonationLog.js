@@ -27,7 +27,7 @@ DonationLog.getTransactionStatus = function()
 	        writeToDontpad("2,00");
 	     },
 	     abort : function() {
-	       	alert("abort - " + transactionCode);
+	       	alert("abort");
 	        writeToDontpad("-2,00");
 	     }
 	});
