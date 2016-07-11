@@ -47,13 +47,9 @@ function getTransactionStatus()
 	PagSeguroLightbox({code: checkoutCode},
 	{
 	     success : function(transactionCode) {
-	        alert("success - " + transactionCode);
-	        console.log("2");
 	        writeToDontpad("2,00");
 	     },
 	     abort : function() {
-	       	alert("abort");
-	       	console.log("1");
 	        writeToDontpad("-2,00");
 	     }
 	});
