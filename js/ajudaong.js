@@ -9,4 +9,3 @@ function readFromDontpad() {
   		console.log( data );
 });
 }
-
